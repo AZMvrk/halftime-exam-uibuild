@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #C0EBF9;
+  color: #467745;
+  font-family: 'Poppins', sans-serif;
+}
+
+form {
+  width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 0px; 
+
+  font-weight: 500;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: #467745;
+}
+
+#root > form > input[type=text] {
+  font-weight: 500;
+  font-size: 16px;
+  max-width: 600px;
+  height: 64px;
+}
+
+input, textarea {
+  padding: 20px;
+  border: 0;
+}
+
+form textarea {
+  font-size: 16px;
+  font-weight: 400;
+  height: 120px;
+  border: 0;
+}
+
+button {
+  width: 280px;
+  height: 80px;
+
+  background-color: #467745;
+  color: #C0EBF9;
+
+  letter-spacing: 0.2em;
+  font-size: 21px;
+  font-weight: 700;
+
+  padding: 20px;
+  text-transform: uppercase;
+
+  margin: 0 auto;
+
+}
+
+::placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+form div input {
+  width: 20px;
+  height: 20px;
+}
+
+#root > form > div:nth-child(4) > input[type=checkbox] {
+  border: 0;
+}
+#root > form > div:nth-child(5) > input[type=checkbox] {
+  border: 0;
+}
+
+
+#root > form > div:nth-child(4) {
+  margin: 0 auto;
+}
+
+#root > form > div:nth-child(5) {
+  margin: 0 auto;
+  position: relative;
+  right: 19%;
+}
+
+
+@media only screen and (max-width: 640px) {
+  
+  body {
+    width: 100% -40px;
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+
+
+}
