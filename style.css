@@ -8,7 +8,7 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,9 +18,13 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-form {
-  width: 600px;
+#root {
+  max-width: 600px;
+  width: 100%;
+  margin: 30px;
+}
 
+form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -65,6 +69,8 @@ button {
   background-color: #467745;
   color: #C0EBF9;
 
+  border: 0;
+
   letter-spacing: 0.2em;
   font-size: 21px;
   font-weight: 700;
@@ -74,6 +80,11 @@ button {
 
   margin: 0 auto;
 
+}
+
+button:hover {
+  cursor: pointer;
+  border: 3px solid #C0EBF9;
 }
 
 ::placeholder {
@@ -91,26 +102,55 @@ form div input {
   height: 20px;
 }
 
-#root > form > div:nth-child(4) > input[type=checkbox] {
-  border: 0;
-}
-#root > form > div:nth-child(5) > input[type=checkbox] {
-  border: 0;
+
+.checkboxAndP {
+  padding-left: 6rem;
 }
 
-
-#root > form > div:nth-child(4) {
-  margin: 0 auto;
+input[type="checkbox"] {
+  display: none;
 }
 
-#root > form > div:nth-child(5) {
-  margin: 0 auto;
+
+.checkboxAndP label {
   position: relative;
-  right: 19%;
+  padding-left: 25px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+}
+
+.checkboxAndP label::before {
+
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+
+  background-color: white;
+}
+
+.checkboxAndP input[type="checkbox"]:checked + label::after {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 2px;
+  width: 6px;
+  height: 11px;
+  border: solid #467745;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  background-color: white;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 650px) {
   
   body {
     width: 100% -40px;
@@ -120,6 +160,18 @@ form div input {
     text-align: left;
   }
 
+  .checkboxAndP {
+    padding-left: 0;
+  }
 
+  .checkboxAndP label::before {
+    position: absolute;
+    left: 0;
+  }
+
+  .checkboxAndP input[type="checkbox"]:checked + label::after{
+    position: absolute;
+    left: 5px;
+  }
 
 }
