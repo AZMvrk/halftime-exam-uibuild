@@ -6,17 +6,17 @@ document.querySelector("#root").insertAdjacentHTML("beforeend", `
 
       <textarea placeholder="Megjegyzés"></textarea>
 
-      <div>
-        <input type="checkbox">
-        <p>Elolvastam és elfogadom az Adatkezelési Tájékoztatót.</p>
+      <div class="checkboxAndP">
+        <input type="checkbox" id="agree" hidden>
+        <label for="agree">Elolvastam és elfogadom az <span class="underline">Adatkezelési Tájékoztatót</span>.</label>
       </div>
       
-      <div>
-        <input type="checkbox">
-        <p>Szeretnék hírlevelet kapni.</p>
+      <div class="checkboxAndP">
+        <input type="checkbox" id="newsletter" hidden>
+        <label for="newsletter">Szeretnék hírlevelet kapni.</label>
       </div>
 
-      <button>Mentés</button>
+      <button type="button">Mentés</button>
 
     </form>
 `)
